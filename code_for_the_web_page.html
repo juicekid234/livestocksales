@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jennifer Livestock Company</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "RSq4YUEI6fIeG2iLi",
+          });
+      })();
+    </script>
+    <style type="text/tailwindcss">
+      @theme {
+        /* You can extend your theme here if needed */
+      }
+    </style><style>
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.4s ease-out;
+  }
+</style>
+
+  </head>
+
+  <body>
+    <header class="bg-green-800 text-white shadow-lg">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+              <span class="text-green-800 font-bold text-xl">JL</span>
+            </div>
+            <div>
+              <h1 class="text-2xl font-bold">Jennifer Livestock Company</h1>
+              <p class="text-green-200">Premium Quality Livestock & Products</p>
+            </div>
+          </div>
+          <nav class="hidden md:flex space-x-6">
+            <a href="#about" class="hover:text-green-200 transition">About</a>
+            <a href="#animals" class="hover:text-green-200 transition">Animals</a>
+            <a href="#products" class="hover:text-green-200 transition">Products</a>
+            <a href="#services" class="hover:text-green-200 transition">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="min-h-screen bg-gradient-to-b from-green-50 to-white">
+      <section class="py-20 bg-gradient-to-r from-green-600 to-green-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-5xl font-bold mb-6">Quality Livestock for Every Need</h2>
+          <p class="text-xl mb-8 max-w-3xl mx-auto">
+            For over 25 years, Jennifer Livestock Company has been your trusted partner in providing
+            premium quality livestock, feed, and agricultural products. From cattle and sheep to
+            poultry and swine, we deliver excellence you can count on.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-green-700 bg-white hover:bg-green-50">
+              View Our Animals
+            </a>
+            <a href="#" id="contactUsButton" class="inline-flex items-center justify-center px-8 py-3 border border-white text-base font-medium rounded-md shadow-sm text-white hover:bg-white hover:text-green-700">
+              Contact Us Today
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-16">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-gray-900 mb-4">About Jennifer Livestock Company</h3>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              Founded in 1998, we are a family-owned business committed to sustainable farming practices
+              and animal welfare. Our expertise spans across all major livestock categories.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-4 gap-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-green-600 text-3xl">🏆</span>
+              </div>
+              <h4 class="text-xl font-semibold mb-2">25+ Years Experience</h4>
+              <p class="text-gray-600">Trusted by farmers and ranchers across the region</p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-green-600 text-3xl">🛡️</span>
+              </div>
+              <h4 class="text-xl font-semibold mb-2">Health Guaranteed</h4>
+              <p class="text-gray-600">All animals certified healthy with complete documentation</p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-green-600 text-3xl">🚚</span>
+              </div>
+              <h4 class="text-xl font-semibold mb-2">Safe Delivery</h4>
+              <p class="text-gray-600">Professional transport services for your livestock</p>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-green-600 text-3xl">🤝</span>
+              </div>
+              <h4 class="text-xl font-semibold mb-2">Expert Support</h4>
+              <p class="text-gray-600">Ongoing consultation and farming guidance</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="animals" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-gray-900 mb-4">Our Livestock</h3>
+            <p class="text-lg text-gray-600">Premium quality animals for farming, breeding, and production</p>
+            <p class="text-lg text-gray-600">Click to Place Order</p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div id="cattleCard" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer" onclick="scrollToFormAndSelect('Cattle')">
+              <div class="text-center">
+                <div class="w-20 h-20 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center overflow-hidden">
+                  <img src="https://www.midwestdairy.com/wp-content/uploads/Midwest-Dairy-ID3146-Midwest-Dairy-Institute-scaled-2048x1463.webp" alt="Cow" class="w-16 h-16 object-cover" />
+                </div>
+                <h3 class="text-xl font-semibold mb-1">Cattle</h3>
+                <p class="text-sm text-gray-600">
+                  Premium beef and dairy cattle breeds
+                </p>
+              </div>
+              <div class="mt-4 space-y-2">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">Angus</span>
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">Holstein</span>
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">Hereford</span>
+              </div>
+              <p class="text-sm text-gray-600 mt-3">Starting from $1,200</p>
+            </div>
+
+            <div id="sheepCard" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer" onclick="scrollToFormAndSelect('Sheep')">
+              <div class="text-center">
+                <div class="w-20 h-20 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center overflow-hidden">
+                  <img src="https://static.vecteezy.com/system/resources/previews/041/952/470/non_2x/ai-generated-angora-goat-with-farm-animals-showcasing-livestock-wool-in-agriculture-and-herd-setting-photo.jpeg" alt="Sheep" class="w-16 h-16 object-cover" />
+                </div>
+                <h3 class="text-xl font-semibold mb-1">Sheep</h3>
+                <p class="text-sm text-gray-600">
+                  Wool and meat production sheep
+                </p>
+              </div>
+              <div class="mt-4 space-y-2">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">Merino</span>
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">Dorper</span>
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">Suffolk</span>
+              </div>
+              <p class="text-sm text-gray-600 mt-3">Starting from $350</p>
+            </div>
+
+            <div id="swineCard" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer" onclick="scrollToFormAndSelect('Swine')">
+              <div class="text-center">
+                <div class="w-20 h-20 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center overflow-hidden">
+                  <img src="https://static.vecteezy.com/system/resources/previews/046/810/956/non_2x/cute-piglet-in-farm-happy-and-healthy-small-pig-livestock-farming-photo.jpg" alt="Pig" class="w-16 h-16 object-cover" />
+                </div>
+                <h3 class="text-xl font-semibold mb-1">Swine</h3>
+                <p class="text-sm text-gray-600">
+                  High-quality pigs for breeding and meat
+                </p>
+              </div>
+              <div class="mt-4 space-y-2">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">Yorkshire</span>
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">Duroc</span>
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">Hampshire</span>
+              </div>
+              <p class="text-sm text-gray-600 mt-3">Starting from $280</p>
+            </div>
+
+            <div id="poultryCard" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer" onclick="scrollToFormAndSelect('Poultry')">
+              <div class="text-center">
+                <div class="w-20 h-20 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center overflow-hidden">
+                  <img src="https://static.vecteezy.com/system/resources/previews/048/687/831/non_2x/white-chickens-in-an-agricultural-farm-for-organic-farming-poultry-and-livestock-chickens-hens-and-free-range-birds-photo.jpg" alt="Chicken" class="w-16 h-16 object-cover" />
+                </div>
+                <h3 class="text-xl font-semibold mb-1">Poultry</h3>
+                <p class="text-sm text-gray-600">
+                  Chickens, ducks, and turkeys
+                </p>
+              </div>
+              <div class="mt-4 space-y-2">
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">Rhode Island Red</span>
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">Leghorn</span>
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">Broiler</span>
+              </div>
+              <p class="text-sm text-gray-600 mt-3">Starting from $15</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="py-16">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-gray-900 mb-4">Livestock Products & Feed</h3>
+            <p class="text-lg text-gray-600">Everything you need for healthy livestock management</p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h4 class="text-xl font-semibold mb-3">Premium Feed</h4>
+              <p class="text-gray-600 mb-4">Nutritionally balanced feed for all livestock types</p>
+              <ul class="space-y-2 text-sm">
+                <li>• Cattle feed pellets</li>
+                <li>• Pig grower feed</li>
+                <li>• Chicken layer feed</li>
+                <li>• Sheep & goat feed</li>
+                <li>• Organic options available</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h4 class="text-xl font-semibold mb-3">Health Supplements</h4>
+              <p class="text-gray-600 mb-4">Vitamins and minerals for optimal animal health</p>
+              <ul class="space-y-2 text-sm">
+                <li>• Vitamin supplements</li>
+                <li>• Mineral blocks</li>
+                <li>• Probiotics</li>
+                <li>• Dewormers</li>
+                <li>• First aid supplies</li>
+              </ul>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h4 class="text-xl font-semibold mb-3">Equipment & Supplies</h4>
+              <p class="text-gray-600 mb-4">Tools and equipment for livestock management</p>
+              <ul class="space-y-2 text-sm">
+                <li>• Feeding equipment</li>
+                <li>• Watering systems</li>
+                <li>• Fencing materials</li>
+                <li>• Barn supplies</li>
+                <li>• Handling equipment</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="py-16 bg-green-50">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-gray-900 mb-4">Our Services</h3>
+            <p class="text-lg text-gray-600">Comprehensive support for your livestock operations</p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h4 class="text-xl font-semibold mb-3">Livestock Transport</h4>
+              <p class="text-gray-600 mb-4">Safe and professional transport services for all livestock types with climate-controlled vehicles.</p>
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">Available 24/7</span>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h4 class="text-xl font-semibold mb-3">Health Certification</h4>
+              <p class="text-gray-600 mb-4">Complete health documentation and veterinary certification for all animals.</p>
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">USDA Approved</span>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h4 class="text-xl font-semibold mb-3">Breeding Consultation</h4>
+              <p class="text-gray-600 mb-4">Expert advice on breeding programs and genetic selection for optimal results.</p>
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">Expert Guidance</span>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h4 class="text-xl font-semibold mb-3">Custom Orders</h4>
+              <p class="text-gray-600 mb-4">Special orders for specific breeds or quantities to meet your exact requirements.</p>
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">Tailored Solutions</span>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h4 class="text-xl font-semibold mb-3">Nutrition Planning</h4>
+              <p class="text-gray-600 mb-4">Customized feeding programs and nutrition plans for different livestock types.</p>
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">Professional Advice</span>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h4 class="text-xl font-semibold mb-3">Farm Setup Consultation</h4>
+              <p class="text-gray-600 mb-4">Complete guidance on setting up livestock facilities and infrastructure.</p>
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">Full Support</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-16">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-gray-900 mb-4">Contact Us</h3>
+            <p class="text-lg text-gray-600">Get in touch for quotes, consultations, or any questions</p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12">
+            <div>
+              <h4 class="text-2xl font-semibold mb-6">Get In Touch</h4>
+              <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                  <span class="text-green-600">📞</span>
+                  <span>(555) 123-4567</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <span class="text-green-600">📧</span>
+                  <span>jenfferlane2000@gmail.com</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <span class="text-green-600">📍</span>
+                  <span>1234 Ranch Road, Farmville, TX 75001</span>
+                </div>
+              </div>
+
+              <hr class="my-6 border-gray-300" />
+
+              <div>
+                <h5 class="font-semibold mb-3">Business Hours</h5>
+                <div class="space-y-2 text-sm text-gray-600">
+                  <div class="flex justify-between">
+                    <span>Monday - Friday:</span>
+                    <span>7:00 AM - 6:00 PM</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Saturday:</span>
+                    <span>8:00 AM - 4:00 PM</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>Sunday:</span>
+                    <span>Emergency calls only</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-green-50 p-6 rounded-lg">
+              <h4 class="text-xl font-semibold mb-4">Request an Order</h4>
+<form class="space-y-4" id="requestQuoteForm">
+  <div>
+    <input
+      type="text"
+      id="user_name"
+      placeholder="Your Name"
+      class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"
+      required
+    />
+  </div>
+  <div>
+    <input
+      type="email"
+      id="user_email"
+      placeholder="Email Address"
+      class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"
+      required
+    />
+  </div>
+  <div>
+    <input
+      type="tel"
+      id="user_phone"
+      placeholder="Phone Number"
+      class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"
+      required
+    />
+  </div>
+  <div>
+    <select
+      id="livestockTypeSelect"
+      class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"
+      required
+    >
+      <option value="">Select Livestock Type</option>
+      <option value="Cattle">Cattle</option>
+      <option value="Sheep">Sheep</option>
+      <option value="Swine">Swine</option>
+      <option value="Poultry">Poultry</option>
+      <option value="Goats">Goats</option>
+      <option value="Goats">Wool</option>
+      <option value="Goats">Eggs</option>
+      <option value="Other">Others specify in the specific requirement</option>
+    </select>
+  </div>
+  <div>
+    <textarea
+      id="user_message"
+      placeholder="Message or specific requirements"
+      rows="4"
+      class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"
+      required
+    ></textarea>
+  </div>
+  <button
+    type="submit"
+    id="submitBtn"
+    disabled
+    class="w-full bg-gray-400 text-white font-bold py-3 px-4 rounded-md cursor-not-allowed transition-colors"
+  >
+    Send Request
+  </button>
+</form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="mainFooter" class="bg-green-800 text-white py-8">
+        <div class="container mx-auto px-4">
+          <div class="text-center">
+            <h4 class="text-xl font-semibold mb-2">Jennifer Livestock Company</h4>
+            <p class="text-green-200 mb-4">Your trusted partner in livestock excellence since 1998</p>
+            <div class="flex justify-center space-x-6 text-sm">
+              <span>Licensed & Insured</span>
+              <span>•</span>
+              <span>USDA Certified</span>
+              <span>•</span>
+              <span>Family Owned</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Toast Notification -->
+<div id="toastContainer" class="fixed top-5 right-5 z-50 space-y-2"></div>
+  </body>
+<script>
+let inputs = [];
+let submitBtn = null;
+
+document.addEventListener('DOMContentLoaded', function () {
+  const contactButton = document.getElementById('contactUsButton');
+  const footer = document.getElementById('mainFooter');
+
+  if (contactButton && footer) {
+    contactButton.addEventListener('click', function (event) {
+      event.preventDefault();
+      footer.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    });
+  }
+
+  // Initialize inputs and button globally
+  inputs = [
+    document.getElementById('user_name'),
+    document.getElementById('user_email'),
+    document.getElementById('user_phone'),
+    document.getElementById('livestockTypeSelect'),
+    document.getElementById('user_message')
+  ];
+  submitBtn = document.getElementById('submitBtn');
+
+  // Attach input listeners
+  inputs.forEach(input => input.addEventListener('input', validateForm));
+
+  // Initial validation check
+  validateForm();
+
+  const quoteForm = document.getElementById('requestQuoteForm');
+  if (quoteForm) {
+    quoteForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      submitBtn.disabled = true;
+      submitBtn.classList.remove('bg-green-600', 'cursor-pointer');
+      submitBtn.classList.add('bg-gray-400', 'cursor-not-allowed');
+
+      const templateParams = {
+        user_name: inputs[0].value,
+        user_email: inputs[1].value,
+        user_phone: inputs[2].value,
+        livestock_type: inputs[3].value,
+        user_message: inputs[4].value
+      };
+
+      const serviceID = 'service_u3pih4r';
+      const templateID = 'template_xaktk1g';
+
+      emailjs.send(serviceID, templateID, templateParams)
+        .then(() => {
+          showToast('Quote request sent successfully!', 'success');
+          quoteForm.reset();
+          validateForm();
+        })
+        .catch((error) => {
+          console.error('EmailJS error:', error);
+          showToast('Failed to send request. Please try again.', 'error');
+          validateForm();
+        });
+    });
+  }
+});
+
+// Validate fields and toggle submit button state
+function validateForm() {
+  if (!inputs.length || !submitBtn) return;
+
+  const allFilled = inputs.every(input => input.value.trim() !== '');
+  submitBtn.disabled = !allFilled;
+  submitBtn.classList.toggle('bg-green-600', allFilled);
+  submitBtn.classList.toggle('bg-gray-400', !allFilled);
+  submitBtn.classList.toggle('cursor-pointer', allFilled);
+  submitBtn.classList.toggle('cursor-not-allowed', !allFilled);
+}
+
+// Scroll to form and select livestock type
+function scrollToFormAndSelect(livestockType) {
+  const formElement = document.getElementById('requestQuoteForm');
+  const selectElement = document.getElementById('livestockTypeSelect');
+
+  if (formElement && selectElement) {
+    formElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    selectElement.value = livestockType;
+    validateForm(); // Re-validate after selection
+  }
+}
+
+// Toast notification system
+function showToast(message, type = 'success') {
+  const toast = document.createElement('div');
+  toast.className = `
+    px-4 py-3 rounded shadow-lg text-white text-sm transition-opacity duration-500
+    ${type === 'success' ? 'bg-green-600' : 'bg-red-600'}
+    opacity-0 animate-fade-in-up
+  `;
+  toast.innerText = message;
+
+  const container = document.getElementById('toastContainer');
+  container.appendChild(toast);
+  void toast.offsetWidth; // Trigger reflow
+
+  toast.classList.remove('opacity-0');
+
+  setTimeout(() => {
+    toast.classList.add('opacity-0');
+    setTimeout(() => toast.remove(), 500);
+  }, 4000);
+}
+</script>
+
+
+</html>
